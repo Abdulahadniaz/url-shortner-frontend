@@ -17,8 +17,11 @@ export default function UrlTable() {
   const fetchUrls = async () => {
     setIsLoading(true);
     setError("");
+
+    const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3001';
+
     try {
-      const response = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/urls/all`);
+      const response = await fetch(`${apiUrl}/urls/all`);
       if (!response.ok) {
         throw new Error("Failed to fetch URLs");
       }

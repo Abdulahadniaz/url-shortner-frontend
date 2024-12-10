@@ -14,8 +14,10 @@ export default function UrlShortenerForm() {
     setError("");
     setShortUrl("");
 
+    const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3001';
+
     try {
-      const response = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/shorten`, {
+      const response = await fetch(`${apiUrl}/shorten`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
