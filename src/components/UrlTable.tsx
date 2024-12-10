@@ -54,7 +54,7 @@ export default function UrlTable() {
       ) : urls.length === 0 ? (
         <div className="text-center text-gray-500">No URLs shortened yet.</div>
       ) : (
-        <div className="overflow-x-auto">
+        <div className="h-72 overflow-y-auto border border-gray-300">
           <table className="min-w-full bg-white shadow-md rounded-lg overflow-hidden">
             <thead className="bg-gray-100">
               <tr>

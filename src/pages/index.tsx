@@ -8,9 +8,6 @@ export default function Home() {
       <div className="w-full max-w-4xl space-y-8">
         <UrlShortenerForm />
         <div>
-          <h2 className="text-2xl font-bold mb-4 text-gray-800">
-            Shortened URLs
-          </h2>
           <UrlTable />
         </div>
       </div>
