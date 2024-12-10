@@ -15,8 +15,7 @@ export default function UrlShortenerForm() {
     setShortUrl("");
 
     try {
-      const response = await fetch("http://localhost:3001/shorten", {
-        // Updated to port 3001
+      const response = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/shorten`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

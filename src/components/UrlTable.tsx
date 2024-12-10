@@ -18,7 +18,7 @@ export default function UrlTable() {
     setIsLoading(true);
     setError("");
     try {
-      const response = await fetch("http://localhost:3001/urls/all");
+      const response = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/urls/all`);
       if (!response.ok) {
         throw new Error("Failed to fetch URLs");
       }
